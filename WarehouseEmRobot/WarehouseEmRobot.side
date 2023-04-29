@@ -1,0 +1,18 @@
+WarehouseEmRobot.c
+functions.c
+ultrasonicSensors.c
+functions.h
+ultrasonicSensors.h
+-I ./../../Learn/Simple Libraries/Utility/libsimpletools
+-L ./../../Learn/Simple Libraries/Utility/libsimpletools
+-I ./../../Learn/Simple Libraries/TextDevices/libfdserial
+-L ./../../Learn/Simple Libraries/TextDevices/libfdserial
+>compiler=C
+>memtype=cmm main ram compact
+>optimize=-Os
+>-m32bit-doubles
+>-fno-exceptions
+>defs::-std=c99
+>-lm
+>linker::-lsimpletools -lfdserial
+>BOARD::ACTIVITYBOARD
