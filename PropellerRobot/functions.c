@@ -522,15 +522,16 @@ void getToStart(){
 } 
 
 void gotoC(){
-  checkStation();
-  lineFollow(MOTOR_KP,0,0);
-  pause(1500);
-  checkStation();
-  lineFollow(MOTOR_KP,0,0);
-  pause(1500);
-  checkStation();
-  lineFollowEnd(MOTOR_KP);
-  pause(1500);
+
+  int num_iterations = 3; // change this to the desired number of iterations
+  int i;
+
+  for(i = 0; i < num_iterations; i++) {
+    checkStation();
+    lineFollow(MOTOR_KP,0,0);
+    pause(1500);
+  }
+
   if(input(TURNRIGHT)){
     turn90Right();
   }

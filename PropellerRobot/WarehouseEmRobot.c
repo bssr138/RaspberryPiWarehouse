@@ -63,7 +63,7 @@ int main(){
   //term = fdserial_open(31, 30, 0, 115200); // RX, TX, mode, baud
   //cogstart(&serial_tx_rx, NULL, stack4, sizeof(stack4));
 
-  // Cog 5
+  // Cog 3
   //------------------------------------------------------------------------
   cogstart(&raspiGPIOs, NULL, stack5, sizeof(stack5));
 
